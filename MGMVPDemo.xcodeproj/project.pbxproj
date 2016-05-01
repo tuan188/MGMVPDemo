@@ -8,20 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		1799EEBF1CD4919900742B05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1799EEBE1CD4919900742B05 /* AppDelegate.swift */; };
-		1799EEC11CD4919900742B05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1799EEC01CD4919900742B05 /* ViewController.swift */; };
 		1799EEC41CD4919900742B05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1799EEC21CD4919900742B05 /* Main.storyboard */; };
 		1799EEC61CD4919900742B05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1799EEC51CD4919900742B05 /* Assets.xcassets */; };
 		1799EEC91CD4919900742B05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1799EEC71CD4919900742B05 /* LaunchScreen.storyboard */; };
+		17B9ACA81CD497B2003AD48F /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9ACA71CD497B2003AD48F /* ProductListViewController.swift */; };
+		17B9ACAF1CD4983A003AD48F /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9ACAE1CD4983A003AD48F /* Product.swift */; };
+		17B9ACB31CD49BA2003AD48F /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9ACB21CD49BA2003AD48F /* ProductListView.swift */; };
+		17B9ACB51CD49C6D003AD48F /* ProductListViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9ACB41CD49C6D003AD48F /* ProductListViewPresenter.swift */; };
+		17B9ACB71CD49D14003AD48F /* ProductListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9ACB61CD49D14003AD48F /* ProductListPresenter.swift */; };
+		17B9ACB91CD49EEC003AD48F /* ProductListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9ACB81CD49EEC003AD48F /* ProductListDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1799EEBB1CD4919900742B05 /* MGMVPDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MGMVPDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1799EEBE1CD4919900742B05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1799EEC01CD4919900742B05 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1799EEC31CD4919900742B05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1799EEC51CD4919900742B05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1799EEC81CD4919900742B05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1799EECA1CD4919900742B05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17B9ACA71CD497B2003AD48F /* ProductListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
+		17B9ACAE1CD4983A003AD48F /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		17B9ACB21CD49BA2003AD48F /* ProductListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
+		17B9ACB41CD49C6D003AD48F /* ProductListViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListViewPresenter.swift; sourceTree = "<group>"; };
+		17B9ACB61CD49D14003AD48F /* ProductListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListPresenter.swift; sourceTree = "<group>"; };
+		17B9ACB81CD49EEC003AD48F /* ProductListDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +64,43 @@
 		1799EEBD1CD4919900742B05 /* MGMVPDemo */ = {
 			isa = PBXGroup;
 			children = (
+				17B9ACAC1CD49814003AD48F /* Services */,
+				17B9ACAB1CD4980F003AD48F /* UI */,
 				1799EEBE1CD4919900742B05 /* AppDelegate.swift */,
-				1799EEC01CD4919900742B05 /* ViewController.swift */,
 				1799EEC21CD4919900742B05 /* Main.storyboard */,
 				1799EEC51CD4919900742B05 /* Assets.xcassets */,
 				1799EEC71CD4919900742B05 /* LaunchScreen.storyboard */,
 				1799EECA1CD4919900742B05 /* Info.plist */,
 			);
 			path = MGMVPDemo;
+			sourceTree = "<group>";
+		};
+		17B9ACAB1CD4980F003AD48F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				17B9ACB01CD49B59003AD48F /* ProductList */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		17B9ACAC1CD49814003AD48F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				17B9ACAE1CD4983A003AD48F /* Product.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		17B9ACB01CD49B59003AD48F /* ProductList */ = {
+			isa = PBXGroup;
+			children = (
+				17B9ACA71CD497B2003AD48F /* ProductListViewController.swift */,
+				17B9ACB21CD49BA2003AD48F /* ProductListView.swift */,
+				17B9ACB41CD49C6D003AD48F /* ProductListViewPresenter.swift */,
+				17B9ACB61CD49D14003AD48F /* ProductListPresenter.swift */,
+				17B9ACB81CD49EEC003AD48F /* ProductListDataSource.swift */,
+			);
+			name = ProductList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +174,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1799EEC11CD4919900742B05 /* ViewController.swift in Sources */,
+				17B9ACAF1CD4983A003AD48F /* Product.swift in Sources */,
+				17B9ACB71CD49D14003AD48F /* ProductListPresenter.swift in Sources */,
+				17B9ACA81CD497B2003AD48F /* ProductListViewController.swift in Sources */,
+				17B9ACB51CD49C6D003AD48F /* ProductListViewPresenter.swift in Sources */,
 				1799EEBF1CD4919900742B05 /* AppDelegate.swift in Sources */,
+				17B9ACB91CD49EEC003AD48F /* ProductListDataSource.swift in Sources */,
+				17B9ACB31CD49BA2003AD48F /* ProductListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +332,7 @@
 				1799EECF1CD4919900742B05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

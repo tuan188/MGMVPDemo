@@ -16,6 +16,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let nc = self.window?.rootViewController as! UINavigationController
+        let productListViewController = nc.topViewController as! ProductListViewController
+        
+        let products = [
+            Product(name: "Keyboard", price: 6),
+            Product(name: "Mouse", price: 5)
+        ]
+        
+        let productListPresenter = ProductListPresenter(view: productListViewController, products: products)
+        productListViewController.presenter = productListPresenter
         return true
     }
 
